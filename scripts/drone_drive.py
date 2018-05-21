@@ -99,16 +99,17 @@ def main():
 
 
 	# Execute SMACH plan
-	outcome = sm.execute()
+	# outcome = sm.execute()
 
 
-	# while not rospy.is_shutdown():
-	# 	take_off.publish(empty_msg)
-	# 	rospy.sleep(4.)
-	# 	print("takeoff")
-	# 	landing.publish(empty_msg)
-	# 	rospy.sleep(4.)
-	# 	print('landing')
+	if not rospy.is_shutdown():
+		take_off.publish(empty_msg)
+		rospy.sleep(4.)
+		print("takeoff")
+		landing.publish(empty_msg)
+		rospy.sleep(4.)
+		print('landing')
+		# outcome = sm.execute()
 
 
 if __name__ == '__main__':
